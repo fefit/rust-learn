@@ -8,7 +8,7 @@ fn main(){
 * 1、扫描所有未排序序列，方式是挨个对比前后两个元素的大小，小的往前排，大的往后排，最终最大的元素一定会被排到最后
 * 2、排除掉后面的已排序好的序列，继续执行上述步骤
 */
-fn bubble_sort(arr: &mut [i32;10]){
+fn bubble_sort<T:Ord>(arr: &mut [T]){
   let len = arr.len();
   // 外循环，执行n次
   for i in 0..len{
